@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "inmet-stations"
+version = "0.1.0"
+description = "This package aims to make it easier to find the weather station in the INMET database closest to the desired location."
+authors = ["victorbenezoli <victorbenezoli@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "inmet_stations" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+shapely = "^2.0.6"
+pyproj = "^3.7.0"
+numpy = "^2.2.2"
+requests = "^2.32.3"
+httpx = "^0.28.1"
+pandas = "^2.3.3"
+tqdm = "^4.67.1"
+remotezip = "^0.12.3"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.30.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
