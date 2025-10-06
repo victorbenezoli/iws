@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "inmet-stations"
-version = "0.1.0"
+name = "inmet-ws"
+version = "0.1.1"
 description = "This package aims to make it easier to find the weather station in the INMET database closest to the desired location."
 authors = ["Victor Benezoli <victorbenezoli@gmail.com>"]
 readme = "README.md"
