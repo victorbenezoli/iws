@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/victorbenezoli/iws/blob/main/logo-horizontal.png" alt="IWS Logo" width="400"/>
+  <img src="https://github.com/victorbenezoli/iws/blob/dfa6560a1f3ab598ec460f08face741912eb0c98/logo-horizontal.png" alt="IWS Logo" width="400"/>
 </p>
 
 <h1 align="center">IWS - Inmet Weather Stations</h1>
