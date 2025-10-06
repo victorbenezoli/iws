@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # iws
 Python package for processing and analyzing data from INMET weather stations.
 =======
 =======
 >>>>>>> 5d87b83 (chore: update project metadata and dependencies)
+=======
+>>>>>>> e3d8f32 (Initial commit)
 <p align="center">
   <img src="logo-horizontal.png" alt="IWS Logo" width="400"/>
 </p>
@@ -83,6 +86,13 @@ Contributions are welcome!
 Distributed under the MIT License.
 See the `LICENSE` file for more information.
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 83b2502 (chore: update project metadata and dependencies)
 =======
 >>>>>>> 5d87b83 (chore: update project metadata and dependencies)
+=======
+=======
+# iws
+Python package for processing and analyzing data from INMET weather stations.
+>>>>>>> 7c9420b (Initial commit)
+>>>>>>> e3d8f32 (Initial commit)
