@@ -31,7 +31,7 @@ pip install iws
 ## 🚀 Basic Usage
 
 ```python
-from iws import InmetStations
+from iws import InmetStations, get_climate_data, GeoCoordinates, Distance
 
 stations = InmetStations()
 
@@ -39,8 +39,19 @@ stations = InmetStations()
 print(stations.list())
 
 # Retrieve data from a specific station
-data = stations.get("A001")
+station = stations["A001"]  # Replace "A001" with the desired station code
+print(station)
+data = get_climate_data(station=station, start_date="2023-01-01", end_date="2023-12-31")
 print(data.head())
+
+# Find the three nearest operating stations to given coordinates
+coords = GeoCoordinates(latitude=-23.55052, longitude=-46.633308, n_nearest=3, only_operating=True)
+nearest_stations = stations.find_nearest(coords)
+print(nearest_stations)
+
+# Find the stations around given coordinates within a 50 km radius
+nearby_stations = stations.find_around(coords, maximum_distance=Distance(50, "km"))
+print(nearby_stations)
 ```
 
 ---
@@ -56,7 +67,8 @@ print(data.head())
 
 ## 📚 Documentation
 
-Full documentation is available at the [Project Wiki](https://github.com/victorbenezoli/iws/wiki).
+- **[API Reference](API_REFERENCE.md)** - Documentação completa da API
+- **[Project Wiki](https://github.com/victorbenezoli/iws/wiki)** - Documentação geral do projeto
 
 ---
 
@@ -68,6 +80,13 @@ Contributions are welcome!
 3. Commit your changes (`git commit -m 'Add new feature'`)
 4. Push to the branch (`git push origin feature/new-feature`)
 5. Open a Pull Request
+
+Please ensure the branch name follows the patterns:
+- `feature/your-feature-name` for new features
+- `bugfix/your-bugfix-name` for bug fixes
+- `hotfix/your-hotfix-name` for urgent fixes
+- `docs/your-docs-update` for documentation updates
+- `improvement/your-improvement-name` for code improvements
 
 ---
 

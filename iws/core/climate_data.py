@@ -6,11 +6,11 @@ import re
 from typing import Dict
 
 import pandas as pd
+from remotezip import RemoteZip
 
 from ..api import InmetAPIClient, filter_station_files, load_inmet_data_list
+from ..common.types import DateType
 from ..models import InmetStation
-from ..types import DateType
-from ..utils import RemoteZip
 from .validators import validate_date_range
 
 

@@ -6,7 +6,7 @@ from typing import Tuple
 
 import pandas as pd
 
-from ..types import DateType
+from ..common.types import DateType
 
 
 def validate_date_range(
