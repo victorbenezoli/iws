@@ -67,7 +67,7 @@ print(nearby_stations)
 
 ## 📚 Documentation
 
-- **[API Reference](API_REFERENCE.md)** - Complete API documentation
+- **[API Reference](API-REFERENCE.md)** - Complete API documentation
 - **[Project Wiki](https://github.com/victorbenezoli/iws/wiki)** - General information and guides
 
 ---
