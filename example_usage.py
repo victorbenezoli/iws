@@ -33,7 +33,7 @@ def find_and_display_stations(
         for i, station in enumerate(nearest_stations, 1):
             distance = station.distance_to(coordinates)
             print(f"{i}. {station.name} ({station.station_code})")
-            print(f"   Distance: {distance:.2f} km\n")
+            print(f"   Distance: {distance.distance:.2f} km\n")
 
         return nearest_stations
 
@@ -55,7 +55,7 @@ def get_and_display_climate_data(
             station=station,
             start_date=start_date,
             end_date=end_date,
-            update_data_list=False,
+            update_data_list=True,
         )
 
         # Display data summary
