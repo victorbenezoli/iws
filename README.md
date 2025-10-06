@@ -56,7 +56,7 @@ print(data.head())
 
 ## 📚 Documentation
 
-Full documentation is available at the [Project Wiki](https://github.com/your-username/iws/wiki).
+Full documentation is available at the [Project Wiki](https://github.com/victorbenezoli/iws/wiki).
 
 ---
 
