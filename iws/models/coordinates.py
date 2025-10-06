@@ -10,8 +10,12 @@ from typing import get_args
 import numpy as np
 from shapely.geometry import Point
 
-from ..exceptions import InvalidLatitudeError, InvalidLongitudeError, InvalidUnitError
-from ..types import DistanceUnit
+from ..common.exceptions import (
+    InvalidLatitudeError,
+    InvalidLongitudeError,
+    InvalidUnitError,
+)
+from ..common.types import DistanceUnit
 
 
 class Latitude(float):
