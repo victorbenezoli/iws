@@ -119,6 +119,44 @@ class InmetStations:
 
         return weather_stations
 
+    def __getitem__(self, station_code: str) -> InmetStation:
+        """
+        Gets a weather station by its station code.
+
+        Parameters
+        ----------
+        station_code : str
+            The station code of the weather station to retrieve.
+
+        Returns
+        -------
+        InmetStation
+            The InmetStation object with the specified station code.
+
+        Raises
+        ------
+        KeyError
+            If no station with the specified code is found.
+
+        """
+        for station in self.weather_stations:
+            if station.station_code == station_code:
+                return station
+        msg = f"Station with code {station_code} not found."
+        raise KeyError(msg)
+
+    def list(self) -> List[InmetStation]:
+        """
+        Lists all weather stations.
+
+        Returns
+        -------
+        List[InmetStation]
+            A list of all InmetStation objects.
+
+        """
+        return self.weather_stations
+
     def find_nearest(
         self,
         location: GeoCoordinates,
@@ -169,15 +207,15 @@ class InmetStations:
 
         return [station for station, _ in distances[:n_nearest]]
 
-    def find_within_radius(
+    def find_around(
         self,
         location: GeoCoordinates,
         maximum_distance: Distance = Distance(100.0, "km"),
         only_operating: bool = True,
     ) -> List[InmetStation]:
         """
-        Find weather stations within a specified maximum distance from a given
-        location.
+        Finds weather stations around a specific geographical location within a
+        given maximum distance.
 
         Parameters
         ----------
