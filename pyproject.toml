@@ -2,12 +2,24 @@
 name = "inmet-stations"
 version = "0.1.0"
 description = "This package aims to make it easier to find the weather station in the INMET database closest to the desired location."
-authors = ["victorbenezoli <victorbenezoli@gmail.com>"]
+authors = ["Victor Benezoli <victorbenezoli@gmail.com>"]
 readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/victorbenezoli/inmet-stations"
+repository = "https://github.com/victorbenezoli/inmet-stations"
+keywords = ["weather", "meteorology", "inmet", "geospatial"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
+]
 packages = [{ include = "inmet_stations" }]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.12,<3.14"
 shapely = "^2.0.6"
 pyproj = "^3.7.0"
 numpy = "^2.2.2"
@@ -16,11 +28,33 @@ httpx = "^0.28.1"
 pandas = "^2.3.3"
 tqdm = "^4.67.1"
 remotezip = "^0.12.3"
-
+spacy = "^3.8.7"
+matplotlib = "^3.10.6"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.30.1"
+pytest = "^8.0.0"
+black = "^24.0.0"
+isort = "^5.13.0"
+mypy = "^1.8.0"
+pre-commit = "^3.6.0"
+
+[tool.poetry.group.test.dependencies]
+pytest-cov = "^4.0.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
